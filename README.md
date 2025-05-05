@@ -1,6 +1,6 @@
 # Robotics Delivery Simulation
 
-This repository contains a simulation of a delivery system with four colored robots navigating to target bases, developed using PyBullet. Created during my B.Sc. in Computer Science (Specialization in AI) at Amrita Vishwa Vidyapeetham University, this project showcases my skills in Python programming and robotics simulation.
+This repository contains a simulation of a delivery system with four colored robots navigating to target bases, developed using PyBullet. Created during my B.tech. in Computer Science (Specialization in AI) at Amrita Vishwa Vidyapeetham University, this project showcases my skills in Python programming and robotics simulation.
 
 ## Project Overview
 
