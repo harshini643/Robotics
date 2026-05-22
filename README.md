@@ -105,3 +105,45 @@ The project generates multiple graphs using Matplotlib:
 ```bash
 robotics_simulation.py
 README.md
+```
+
+---
+
+## Getting Started
+
+### Install Dependencies
+
+```bash
+pip install pybullet matplotlib numpy
+```
+
+### Run the Simulation
+
+```bash
+python robotics_simulation.py
+```
+
+---
+
+## Example Input
+
+```bash
+green to blue, red to yellow, blue to green, yellow to red
+```
+
+---
+
+## Requirements
+
+- Python 3.8+
+- PyBullet
+- Matplotlib
+- NumPy
+- System with GUI support for PyBullet visualization
+
+---
+
+
+## License
+
+This project is licensed under the MIT License.
