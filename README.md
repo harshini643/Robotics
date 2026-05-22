@@ -1,38 +1,107 @@
-# Robotics Delivery Simulation
+# Multi-Agent Autonomous Robot Delivery Simulation
 
-This repository contains a simulation of a delivery system with four colored robots navigating to target bases, developed using PyBullet. Created during my B.tech. in Computer Science (Specialization in AI) at Amrita Vishwa Vidyapeetham University, this project showcases my skills in Python programming and robotics simulation.
+This repository contains a real-time autonomous robot delivery simulation developed using PyBullet and Python. The project simulates multiple robots operating in a shared environment while delivering packages, avoiding moving obstacles, and coordinating with each other dynamically.
+
+Developed during my B.Tech in Computer Science (Specialization in AI) at Amrita Vishwa Vidyapeetham University.
+
+---
 
 ## Project Overview
 
-The Robotics Delivery Simulation features four robots (Green, Red, Blue, Yellow) that autonomously navigate a 2D environment to deliver packages to corresponding colored bases while avoiding obstacles. All functionality is implemented in a single Python file, with visualizations of robot paths and delivery timelines.
+The simulation consists of four autonomous robots:
 
-- **Technologies**: Python, PyBullet, Matplotlib, NumPy
-- **Features**:
-  - Autonomous navigation for four robots to user-specified target bases.
-  - Obstacle avoidance using proximity-based detection.
-  - Visualized robot trajectories with Matplotlib, including markers (e.g., circles, 'x') for stops.
-  - Precise positioning with logged delivery status.
-- **File**: `robotics_simulation.py`
+- Green Robot
+- Red Robot
+- Blue Robot
+- Yellow Robot
 
-## Getting Started
+Each robot:
+- Picks up a package from its home base
+- Navigates toward a target base
+- Avoids moving cars and nearby robots
+- Optionally stops at intermediate delivery stations
+- Delivers the package
+- Returns safely to its starting position
 
-To run the simulation:
-1. Install dependencies:
-   ```bash
-   pip install pybullet matplotlib numpy
-   ```
-2. Run the script:
-   ```bash
-   python robotics_simulation.py
-   ```
-3. Follow prompts to specify robot paths (e.g., "Green robot to Blue base").
+The project demonstrates:
+- Autonomous robot navigation
+- Multi-agent coordination
+- Dynamic obstacle avoidance
+- Deadlock recovery
+- Real-time robotics simulation
+- Visualization and analytics
 
-**Requirements**:
-- Python 3.8+
-- PyBullet, Matplotlib, NumPy
-- A system with GUI support for PyBullet visualization
+---
 
+## Technologies Used
 
+- **Programming Language**: Python
+- **Physics Simulation Engine**: PyBullet
+- **Visualization**: Matplotlib
+- **Numerical Computation**: NumPy
+- **Utility Modules**: math, random, time
 
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+---
+
+## Key Features
+
+- Multi-robot autonomous delivery system
+- Dynamic moving traffic simulation
+- Real-time collision avoidance
+- Robot-to-robot obstacle avoidance
+- Deadlock detection and recovery
+- Intermediate delivery stops
+- Centralized communication hub
+- Real-time movement analytics
+- Smooth path planning and steering behavior
+
+---
+
+## Core Logic
+
+### Autonomous Navigation
+
+Each robot continuously calculates a direction toward its destination and updates its movement in real time.
+
+### Obstacle Detection
+
+Robots continuously detect:
+- Moving cars
+- Other robots
+
+using distance-based calculations.
+
+### Collision Avoidance
+
+The movement system combines:
+- Goal direction toward destination
+- Repulsion direction away from nearby obstacles
+
+This allows robots to safely navigate without collisions.
+
+### Deadlock Recovery
+
+If robots remain stuck for too long near obstacles or delivery bases, an emergency escape direction is generated automatically to recover movement.
+
+### Dynamic Traffic Simulation
+
+Cars move continuously across multiple lanes with looping road behavior to simulate real-world traffic obstacles.
+
+---
+
+## Analytics & Visualization
+
+The project generates multiple graphs using Matplotlib:
+
+- Robot Path Trajectories
+- Obstacle Avoidance Frequency
+- Cumulative Distance Traveled
+- Communication Hub Activity
+
+---
+
+## Project Structure
+
+```bash
+robotics_simulation.py
+README.md
